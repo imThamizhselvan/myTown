@@ -17,6 +17,8 @@
  } from "react-navigation";
  import { HomeScreen } from './containers/HomeScreen';
  import { AuthenticationScreen } from './containers/AuthenticationScreen';
+ import { ForgotPassword } from './containers/ForgotPassword';
+ import { SignUp } from './containers/SignUp';
  import { HomeTab } from './containers/TabNavigation/HomeTab';
  import { FavouritesTab } from './containers/TabNavigation/FavouritesTab';
  import { NotificationsTab } from './containers/TabNavigation/NotificationsTab';
@@ -143,11 +145,13 @@
 
  const AppSwitchNavigator = createSwitchNavigator(
    {
-     Authentication: { screen: AuthenticationScreen },
-     Home: { screen: AppDrawerNavigator }
+     AuthenticationScreen: { screen: AuthenticationScreen },
+     SignUp: { screen: SignUp },
+     Home: { screen: AppDrawerNavigator },
+     ForgotPassword: { screen: ForgotPassword },
    },
    {
-     initialRouteName: "Authentication"
+     initialRouteName: "AuthenticationScreen"
    }
  );
 
